@@ -1,0 +1,102 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #0D0D0D;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #40a580;
+    border-radius: 16px;
+}
+
+body::-webkit-scrollbar:hover {
+    color: #215b46;
+}
+
+button {
+    font-family: "Roboto", sans-serif;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 120vh;
+    background-color: #0D0D0D;
+    color: #F2F2F2;
+}
+
+section:nth-child(odd){
+    background-color: #262626;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 50vh;
+    color: #F2F2F2;
+}
+
+.scroll-top-button {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.75rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0;
+    border-radius: 50%;
+    background-color: #40a580;
+    color: #0D0D0D;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+.scroll-top-button i {
+    font-size: 16px;
+}
+
+.scroll-top-button.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top-button.visible:hover {
+    transform: scale(1.2);
+}
+
+progress {
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 5px;
+    border: none;
+    background: transparent;
+}
+
+progress::-webkit-progress-bar {
+    background: inherit;
+}
+
+progress::-webkit-progress-value {
+    background-color: #40a580;
+}
