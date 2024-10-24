@@ -1,0 +1,286 @@
+header {
+    background-color: #0D0D0D;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+#navbar.active {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    transition: .5s;
+}
+
+.navbar__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3.5rem;
+}
+
+.navbar__content .title-name a{
+    font-size: 26px;
+    color: #F5F5F5;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.navbar__content .navbar-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+    transition: .5s;
+}
+
+.navbar__content .navbar-links a {
+    position: relative;
+    font-size: 16px;
+    color: #f5f5f5;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.navbar__content .navbar-links a::after{
+    content: "";
+    position: absolute;
+    background-color: #40a580;
+    height: 3px;
+    border-radius: 8px;
+    left: 0;
+    width: 0;
+    bottom: -6px;
+    transition: 0.3s;
+}
+
+.navbar__content .navbar-links a:hover,
+.navbar__content .navbar-links a:focus,
+.navbar__content .navbar-links a.active {
+    color: #fff;
+}
+
+.navbar__content .navbar-links a:hover::after,
+.navbar__content .navbar-links a:focus::after,
+.navbar__content .navbar-links a.active::after {
+    width: 100%;
+}
+
+.dropdown .button,
+.navbar__content-mobile .overlay .overlay-content .dropdown .button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #262626;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 14px;
+    gap: 8px;
+    padding: 8px 1rem;
+    color: #f5f5f5;
+    height: 2.5rem;
+}
+
+.dropdown .button span,
+.navbar__content-mobile .overlay .overlay-content .dropdown .button span {
+    display: flex;
+    align-items: center;
+    width: 1.5rem;
+}
+
+.dropdown .button span img,
+.navbar__content-mobile .overlay .overlay-content .dropdown .button span img {
+    width: 100%;
+}
+
+.dropdown,
+.navbar__content-mobile .overlay .overlay-content .dropdown  {
+    position: relative;
+}
+
+.dropdown .button #icon,
+.navbar__content-mobile .overlay .overlay-content .dropdown .button #icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.dropdown > .button,
+.navbar__content-mobile .overlay .overlay-content .dropdown > .button {
+    position: relative;
+    z-index: 2;
+    transition: .3s;
+}
+
+.dropdown > .button:hover,
+.navbar__content-mobile .overlay .overlay-content .dropdown > .button:hover {
+    background-color: #3a3a3a;
+}
+
+.dropdown.open > .button,
+.navbar__content-mobile .overlay .overlay-content .dropdown.open > .button {
+    background-color: #40a580;
+}
+
+.dropdown .menu,
+.navbar__content-mobile .overlay .overlay-content .dropdown .menu {
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+    top: 2rem;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-top: 0;
+    background-color: #3e3e3e;
+    translate: 0 -20px;
+    transition: .4s;
+}
+
+.dropdown .menu .button,
+.navbar__content-mobile .overlay .overlay-content .dropdown .menu .button {
+    text-decoration: none;
+    font-size: 14px;
+    border: 0;
+    height: 1.5rem;
+    border-radius: 0;
+    padding: 1rem 1rem 8px 1rem;
+}
+
+.dropdown .menu .button:hover,
+.navbar__content-mobile .overlay .overlay-content .dropdown .menu .button:hover {
+    background-color: #383838;
+}
+
+.dropdown.open .menu,
+.navbar__content-mobile .overlay .overlay-content .dropdown.open .menu {
+    opacity: 1;
+    translate: 0;
+    visibility: visible;
+}
+
+.navbar__content-mobile .overlay,
+.navbar__content .burguer {
+    display: none;
+}
+
+
+@media screen and (max-width: 1023px) {
+    .navbar__content .navbar-links,
+    .navbar__content .dropdown {
+        display: none;
+    }
+    
+    .navbar__content .burguer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        color: #fff;
+        cursor: pointer;
+        border: none;
+        padding: 0;
+        font-size: 22px;
+    }
+
+    .navbar__content-mobile {
+        position: fixed;
+        z-index: 10;
+        right: 0;
+        top: 0;
+        height: 100%;
+        max-width: 20rem;
+        width: 0;
+        overflow-x: hidden;
+        transition: all .75s;
+        background-color: #181818;
+    }
+
+    .navbar__content-mobile .overlay {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 3rem;
+        padding: 1.5rem 3.5rem;
+    } 
+
+    .navbar__content-mobile .overlay .close-btn {
+        border: none;
+        background: none;
+        padding: 0;
+        font-size: 24px;
+        color: #F5F5F5;
+        cursor: pointer;
+    }
+
+    .navbar__content-mobile .overlay .overlay-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        width: 100%;
+        gap: 1.5rem;
+        transition: .5s;
+    }
+
+    .navbar__content-mobile .overlay .overlay-content .mobile-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+    
+    .navbar__content-mobile .overlay .overlay-content .mobile-links a {
+        position: relative;
+        font-size: 16px;
+        color: #f5f5f5;
+        text-decoration: none;
+        transition: .2s;
+    }
+    
+    .navbar__content-mobile .overlay .overlay-content .mobile-links a::after{
+        content: "";
+        position: absolute;
+        background-color: #40a580;
+        height: 3px;
+        border-radius: 8px;
+        left: 0;
+        width: 0;
+        bottom: -6px;
+        transition: 0.3s;
+    }
+    
+    .navbar__content-mobile .overlay .overlay-content .mobile-links a:hover,
+    .navbar__content-mobile .overlay .overlay-content .mobile-links a:focus,
+    .navbar__content-mobile .overlay .overlay-content .mobile-links a.active {
+        color: #fff;
+    }
+    
+    .navbar__content-mobile .overlay .overlay-content .mobile-links a:hover::after,
+    .navbar__content-mobile .overlay .overlay-content .mobile-links a:focus::after,
+    .navbar__content-mobile .overlay .overlay-content .mobile-links a.active::after {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .navbar__content-mobile{
+        max-width: 100%;
+    }
+
+    .navbar__content-mobile .overlay {
+        padding: 1.5rem;
+    }
+
+    .navbar__content {
+        padding: 1.5rem;
+    }
+}

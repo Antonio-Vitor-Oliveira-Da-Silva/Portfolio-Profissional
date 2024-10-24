@@ -1,0 +1,130 @@
+.all__projects {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 10rem 3rem;
+}
+
+.all__projects .project-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #262626;
+    border-radius: 12px;
+    gap: 8px;
+}
+
+.all__projects .project-area .left-side {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px 0 0 12px;
+    width: 500px;
+    height: 250px;
+}
+
+.all__projects .project-area .left-side img {
+    width: 500px;
+    height: 100%;
+    border-radius: inherit;
+    transition: .5s;
+}
+
+.all__projects .project-area .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    gap: 1.25rem;
+}
+
+.all__projects .project-area .right-side h1 {
+    font-size: 26px;
+    color: #40a580;
+}
+
+.all__projects .project-area .right-side .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    text-align: start;
+    font-size: 14px;
+    gap: 12px;
+}
+
+.all__projects .project-area .right-side .description p {
+    color: #ccc;
+}
+
+.all__projects .project-area .right-side .description span {
+    color: #40a580;
+}
+
+.all__projects .project-area .right-side .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.all__projects .project-area .right-side .buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    background-color: #0d0d0d;
+    filter: drop-shadow(2px 2px 5px #424242);
+    border-radius: 16px;
+    color: #f8f8f8;
+    text-decoration: none;
+    padding: 8px;
+    gap: 5px;
+    transition: .3s;
+}
+
+.all__projects .project-area .right-side .buttons a:hover,
+.all__projects .project-area .right-side .buttons a:focus {
+    color: #40a580;
+    transform: scale(1.05);
+}
+
+@media screen and (max-width:1023px) {
+    .all__projects .project-area {
+        gap: 0;
+    }
+
+    .all__projects .project-area .left-side {
+        width:380px;
+    }
+    
+    .all__projects .project-area .left-side img {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .all__projects {
+        padding: 10rem 1.5rem;
+    }
+
+    .all__projects .project-area {
+        flex-direction: column;
+    }
+
+    .all__projects .project-area .left-side {
+        border-radius: 12px;
+        width: 100%;
+    }
+
+    .all__projects .project-area .left-side img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .all__projects .project-area .right-side .buttons {
+        flex-direction: column;
+    }
+}

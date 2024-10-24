@@ -1,0 +1,126 @@
+.home__content {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 2rem;
+    padding: 1.5rem 3.5rem;
+    gap: 1rem;
+}
+
+.home__content .left-side{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.home__content .left-side .home-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}
+
+.home__content .left-side .home-text p {
+    font-size: 16px;
+    line-height: 1.3rem;
+    color: #ddd;
+}
+
+.home__content .left-side .home-text h1 {
+    font-size: 42px;
+}
+
+.home__content .left-side .home-text span {
+    color: #40a580;
+}
+
+.home__content .left-side .social-media {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.home__content .left-side .social-media a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 24px;
+    transition: .25s;
+}
+
+.home__content .left-side .social-media a:hover,
+.home__content .left-side .social-media a:focus {
+    color: #40a580;
+    transform: scale(1.2);
+}
+
+.home__content .left-side .download-cv {
+    border-radius: 8px;
+}
+
+.home__content .left-side .download-cv button {
+    border: 0;
+    background-color: #262626;
+    border-radius: inherit;
+    cursor: pointer;
+    padding: 10px 1rem;
+    font-size: 16px;
+    color: #f5f5f5;
+    transition: .3s;
+}
+
+.home__content .left-side .download-cv button:hover,
+.home__content .left-side .download-cv button:focus {
+    background: #215b46;
+}
+
+.home__content .right-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 8px;
+    filter: drop-shadow(10px -10px 10px rgb(65,165,128));
+    transition: .3s;
+}
+
+.home__content .right-side img {
+    width: 50%;
+    transition: .5s;
+    border-radius: inherit;
+}
+
+@media screen and (max-width: 1023px) {
+    .home__content .right-side img {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .home__content {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5rem;
+        padding: 3.5rem 1.5rem;
+        gap: 5rem;
+   }
+
+   .home__content .left-side {
+        align-items: center;
+        text-align: center;
+   }
+
+   .home__content .left-side .home-text h1 {
+        font-size: 32px;
+    }
+
+   .home__content .right-side {
+        filter: drop-shadow(5px -5px 10px rgb(65,165,128))
+   }
+
+   .home__content .right-side img {
+        width: 100%;
+   }
+}

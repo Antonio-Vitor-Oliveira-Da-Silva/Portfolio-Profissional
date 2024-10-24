@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site, Portfolio, Antonio Vitor, Vitor,
+    Front-End, Front, End, Developer, Python">
+
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://portfolio-profissional-roan.vercel.app/assets/Photo.jpg">
+
+    <meta property="og:title" content="Portfolio Profissional">
+    <meta property="og:site_name" content="Antonio Vitor Portfolio">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+
+    <link rel="shortcut icon" href="./assets/page-icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/extends.css">
+
+    <title>Antonio Vitor | Portfólio</title>
+</head>
+<body>
+    <header id="navbar">
+        <div class="navbar__content">
+            <div class="title-name">
+                <a href='projects.html'>Antonio Vitor</a>
+            </div>
+
+            <nav class="navbar-links">
+                <a data-scroll='home' href='index.html#home'>Início</a>
+                <a data-scroll='about' href='index.html#about'>Sobre</a>
+                <a data-scroll='skills' href='index.html#skills'>Habilidades</a>
+                <a class='active' data-scroll='projects' href='projects.html'>Projetos</a>
+            </nav>
+
+            <div id="dropdown" class="dropdown">
+                <button class="button" onclick="handleDropdownClicked(event)">
+                    <span>
+                        <img src="./assets/Brasil.png" alt="brasil">
+                    </span>
+                    Português
+                    <span id="icon">
+                        <i class="fa-solid fa-angle-down"></i>
+                    </span>
+                </button>
+                <div class="menu">
+                    <a class='button' href='projectsenglish.html'>
+                        <span>
+                            <img src="./assets/Estados Unidos.png" alt="estados-unidos">
+                        </span>
+                        Inglês
+                    </a>
+                </div>
+            </div>
+
+            <button class="fa-solid fa-bars burguer" onclick="openNav()"></button>
+        </div>
+
+        <div id="nav__mobile" class="navbar__content-mobile">
+            <div class="overlay">
+                <button class="fa-solid fa-x close-btn" onclick="closeNav()"></button>
+    
+                <div class="overlay-content">
+                    <nav class="mobile-links">
+                        <div><a data-scroll='home' href='/#home'>Início</a></div>
+                        <div><a data-scroll='about' href='/#about'>Sobre</a></div>
+                        <div><a data-scroll='skills' href='/#skills'>Habilidades</a></div>
+                        <div><a class='active' data-scroll='projects' href='/projects#projects'>Projetos</a></div>
+                    </nav>
+
+                    <div id="dropdown-mobile" class="dropdown">
+                        <button class="button" onclick="handleDropdownClickedMobile(event)">
+                            <span>
+                                <img src="./assets/Brasil.png" alt="brasil">
+                            </span>
+                            Português
+                            <span id="iconMobile">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </span>
+                        </button>
+                        <div class="menu">
+                            <a class='button' href='projectsenglish.html'>
+                                <span>
+                                    <img src="./assets/Estados Unidos.png" alt="estados-unidos">
+                                </span>
+                                Inglês
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="projects">
+        <div class="all__projects">
+
+            <div class="project-area">
+                <div class="left-side">
+                    <img src="./assets/Landing Page Barbearia.jpg" alt="barbearia-img">
+                </div>
+
+                <div class="right-side">
+                    <h1>Site para Barbearia</h1>
+
+                    <div class="description">
+                        <p>Nesse projeto, fiz uma página de uma barbearia (inventada por mim). Durante ele, pude aprimorar minhas habilidades em HTML, Sass, CSS e JavaScript.</p>
+                        <span>HTML, Sass, CSS & JavaScript</span>
+                    </div>
+
+                    <div class="buttons">
+                        <a href="https://landing-page-barbearia-responsivo-profissional.vercel.app" target="_blank" rel="noopener noreferer">
+                            <i class="fa-solid fa-eye"></i>
+                            <h2>Demonstração</h2>
+                        </a>
+                        <a href="https://github.com/Antonio-Vitor-Oliveira-Da-Silva/Landing-Page-Barbearia-Responsivo-Profissional" target="_blank" rel="noopener noreferer">
+                            <i class="fa-solid fa-code"></i>
+                            <h2>Código</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-area">
+                <div class="left-side">
+                    <img src="./assets/Cardápio digital.jpg" alt="cardapio-img">
+                </div>
+
+                <div class="right-side">
+                    <h1>Sistema para Delivery</h1>
+
+                    <div class="description">
+                        <p>Nesse projeto, fiz um site para uma hamburgueria (inventada por mim). Durante esse
+                            projeto, pude melhorar minhas habilidades no framework Tailwind CSS, além de utilizar JavaScript
+                            para todas as funcionalidades do cardápio.
+                        </p>
+                        <span>HTML, Tailwind CSS, JavaScript & Node.js</span>
+                    </div>
+
+                    <div class="buttons">
+                        <a href="https://hamburgueria-website.vercel.app" target="_blank" rel="noopener noreferer">
+                            <i class="fa-solid fa-eye"></i>
+                            <h2>Demonstração</h2>
+                        </a>
+                        <a href="https://github.com/Antonio-Vitor-Oliveira-Da-Silva/Hamburgueria-Website" target="_blank" rel="noopener noreferer">
+                            <i class="fa-solid fa-code"></i>
+                            <h2>Código</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-area">
+                <div class="left-side">
+                    <img src="./assets/SEJAFIT.png" alt="sejafit-img">
+                </div>
+
+                <div class="right-side">
+                    <h1>Site para Academia</h1>
+
+                    <div class="description">
+                        <p>Nesse projeto, desenvolvi um site para uma academia especializada em performance e aperfeiçoamento 
+                            (inventada por mim). Durante ele, pude aprofundar minhas habilidades em HTML,CSS e 
+                            JavaScript.</p>
+                        <span>HTML, CSS, JavaScript</span>
+                    </div>
+
+                    <div class="buttons">
+                        <a href="https://sejafit.vercel.app" target="_blank" rel="noopener noreferer">
+                            <i class="fa-solid fa-eye"></i>
+                            <h2>Demonstração</h2>
+                        </a>
+                        <a href="https://github.com/Antonio-Vitor-Oliveira-Da-Silva/Academy-Website" target="_blank" rel="noopener noreferer">
+                            <i class="fa-solid fa-code"></i>
+                            <h2>Código</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-area">
+                <div class="left-side">
+                    <img src="./assets/Salon Hair Cosmetic Fashion.png" alt="salon-hair-img">
+                </div>
+
+                <div class="right-side">
+                    <h1>Site para Salão de Beleza</h1>
+
+                    <div class="description">
+                        <p>Nesse projeto, desenvolvi um site para um salão de beleza especializada em 
+                            performance capilar e hidratação 
+                            (inventada por mim). Durante ele, pude aprofundar minhas habilidades em HTML,Bootstrap, CSS e 
+                            JavaScript com JQuery.
+                        </p>
+                        <span>HTML, Bootstrap, CSS, JavaScript & JQuery</span>
+                    </div>
+
+                    <div class="buttons">
+                        <a href="https://salon-hair-gamma.vercel.app" target="_blank" rel="noopener noreferer">
+                            <i class="fa-solid fa-eye"></i>
+                            <h2>Demonstração</h2>
+                        </a>
+                        <a href="https://github.com/Antonio-Vitor-Oliveira-Da-Silva/Salon-Hair-Website" target="_blank" rel="noopener noreferer">
+                            <i class="fa-solid fa-code"></i>
+                            <h2>Código</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-area">
+                <div class="left-side">
+                    <img src="./assets/Grilli Restaurant Website.png" alt="sejafit-img">
+                </div>
+
+                <div class="right-side">
+                    <h1>Site para Restaurante</h1>
+
+                    <div class="description">
+                        <p>Nesse projeto, desenvolvi um site para um restaurante
+                            (inventada por mim). Durante ele, pude aprofundar minhas 
+                            habilidades em HTML, CSS & JavaScript.
+                        </p>
+                        <span>HTML, CSS & JavaScript</span>
+                    </div>
+
+                    <div class="buttons">
+                        <a href="https://grilli-restaurant-website-zeta.vercel.app" target="_blank" rel="noopener noreferer">
+                            <i class="fa-solid fa-eye"></i>
+                            <h2>Demonstração</h2>
+                        </a>
+                        <a href="https://github.com/Antonio-Vitor-Oliveira-Da-Silva/Grilli-Restaurant-Website" target="_blank" rel="noopener noreferer">
+                            <i class="fa-solid fa-code"></i>
+                            <h2>Código</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer__container">
+            <div class="footer__content">
+                <div class="left-side">
+                    <h1>Entre em Contato</h1>
+                    <p>Está interessado no meu trabalho? Entre em contato comigo para discutir suas necessidades. Estou 
+                        ansioso para trabalharmos juntos!</p>
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/vitor_oliveiras20?igsh=cmV5dnNkcTdqM2V6" target="_blank" rel="noopener noreferer"  aria-label="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/5585985244438" target="_blank" rel="noopener noreferer"  aria-label="whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="right-side">
+                    <div class="block">
+                        <a href="mailto:vo48908@gmail.com" target="_blank" rel="noopener noreferer">
+                            <i class="fa-regular fa-envelope"></i>
+                            <h2>vo48908@gmail.com</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bar"></div>
+
+            <div class="copyright">
+                <h3>&copy; Antonio Vitor - Todos direitos reservados.</h3>
+            </div>
+        </div>
+    </footer>
+
+    <button type="button" id="scroll-top-button" onclick="scrollToTop()" class="scroll-top-button">
+        <span>
+            <i class="fa-solid fa-arrow-up"></i>
+        </span>
+    </button>
+
+    <progress max="100" value="0"></progress>
+
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+    integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    ></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"
+    integrity="sha512-A64Nik4Ql7/W/PJk2RNOmVyC/Chobn5TY08CiKEX50Sdw+33WTOpPJ/63bfWPl0hxiRv1trPs5prKO8CpA7VNQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="./javascript/script.js"></script>
+</body>
+</html>

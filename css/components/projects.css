@@ -1,0 +1,312 @@
+.projects__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 5rem 3.5rem;
+}
+
+.projects__content .projects-title h1 {
+    font-size: 28px;
+}
+
+.projects__content .projects-title span {
+    color: #40a580;
+}
+
+.projects__content .project {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: rgba(13,13,13, .75);
+    padding: 2rem;
+    border-radius: 12px;
+    gap: 4rem;
+}
+
+.projects__content .project .left-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.projects__content .project .left-side img {
+    width: 100%;
+    border-radius: inherit;
+    transition: .5s;
+}
+
+.projects__content .project .left-side img:hover {
+    transform: scale(1.1);
+}
+
+.projects__content .project .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.projects__content .project .right-side h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #40a580;
+}
+
+.projects__content .project .right-side .description {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.projects__content .project .right-side .description p {
+    color: #ddd;
+    line-height: 1.2rem;
+}
+
+.projects__content .project .right-side .description span {
+    color: #40a580;
+    font-size: 16px;
+}
+
+.projects__content .project .right-side .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.projects__content .project .right-side .buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    background-color: #262626;
+    color: #f5f5f5;
+    padding: 12px;
+    border-radius: 26px;
+    filter: drop-shadow(2px 2px 5px #000);
+    transition: .3s;
+}
+
+.projects__content .project .right-side .buttons a:hover {
+    color: #40a580;
+    transform: scale(1.05);
+}
+
+
+/*Projeto com lado contrário*/
+
+.projects__content .other-project {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: rgba(13,13,13, .75);
+    padding: 2rem;
+    border-radius: 12px;
+    gap: 4rem;
+}
+
+.projects__content .other-project .right-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.projects__content .other-project .right-side img {
+    width: 100%;
+    border-radius: inherit;
+    transition: .5s;
+}
+
+.projects__content .other-project .right-side img:hover {
+    transform: scale(1.1);
+}
+
+.projects__content .other-project .left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.projects__content .other-project .left-side h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #40a580;
+}
+
+.projects__content .other-project .left-side .description {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.projects__content .other-project .left-side .description p {
+    text-align: end;
+    color: #ddd;
+    line-height: 1.2rem;
+}
+
+.projects__content .other-project .left-side .description span {
+    color: #40a580;
+    font-size: 16px;
+}
+
+.projects__content .other-project .left-side .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.projects__content .other-project .left-side .buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    background-color: #262626;
+    color: #f5f5f5;
+    padding: 12px;
+    border-radius: 26px;
+    filter: drop-shadow(2px 2px 5px #000);
+    transition: .3s;
+}
+
+.projects__content .other-project .left-side .buttons a:hover {
+    color: #40a580;
+    transform: scale(1.05);
+}
+
+
+.projects__content .button__all-projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.projects__content .button__all-projects a {
+    text-decoration: none;
+    color: #f5f5f5;
+    background-color: rgba(13,13,13, .75);
+    padding: 8px 1rem;
+    font-size: 18px;
+    border-radius: 26px;
+    transition: .2s;
+}
+
+.projects__content .button__all-projects a:hover,
+.projects__content .button__all-projects a:focus {
+    background-color: #215b46;
+    transform: scale(1.05);
+}
+
+
+@media screen and (max-width:1023px) {
+    .projects__content .project {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+
+    .projects__content .project .right-side {
+        width: 85%;
+    }
+
+    .projects__content .project .left-side {
+        width: 85%;
+    }
+
+    .projects__content .project .left-side img:hover {
+        transform: none;
+    }
+
+    .projects__content .project .right-side .description {
+        align-items: center;
+        text-align: center;
+    }
+
+
+    /*Projeto do lado contrário*/
+
+    .projects__content .other-project {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+        transform: scale(1);
+    }
+
+    .projects__content .other-project .left-side {
+        width: 85%;
+    }
+
+    .projects__content .other-project .right-side {
+        width: 85%;
+    }
+
+    .projects__content .other-project .right-side img:hover {
+        transform: scale(1);
+    }
+
+    .projects__content .other-project .left-side .description {
+        align-items: center;
+    }
+
+    .projects__content .other-project .left-side .description p {
+        text-align: center;
+    }
+}
+
+
+
+@media screen and (max-width:767px) {
+    .projects__content {
+        padding: 5rem 1.5rem;
+        width: 80%;
+    }
+
+    .projects__content .project {
+        padding: 2.5rem 0;
+    }
+
+    .projects__content .project .right-side .buttons a {
+        padding: 8px;
+    }
+
+
+    .projects__content .other-project {
+        padding: 2.5rem 0;
+    }
+
+    .projects__content .other-project .left-side .buttons a {
+        padding: 8px;
+    }
+}
+
+
+@media screen and (max-width:400px) {
+    .projects__content .project .right-side .buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+    .projects__content .other-project .left-side .buttons {
+        display: flex;
+        flex-direction: column;
+    }
+}
